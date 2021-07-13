@@ -303,9 +303,22 @@
     transform: scale(2);
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
+  .to-top {
+    display: none;
+  }
+
   .main-about {
     flex-direction: column;
     gap: 32px;
+    justify-content: space-between;
+
+    .left {
+      flex: 1;
+    }
   }
 
   .container-item:nth-child(2) {

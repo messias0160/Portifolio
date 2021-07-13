@@ -1143,12 +1143,26 @@ body {
     -webkit-transform: scale(2);
             transform: scale(2);
   }
+  body {
+    overflow-x: hidden;
+  }
+  .to-top {
+    display: none;
+  }
   .main-about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 32px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-about .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .container-item:nth-child(2) img {
     display: none;
