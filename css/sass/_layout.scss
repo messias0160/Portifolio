@@ -93,18 +93,6 @@
   align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-  .svg-hero {
-    transform: scale(1.3);
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .svg-hero {
-    transform: scale(2);
-  }
-}
-
 // ABOUT
 
 .about-content {
@@ -301,5 +289,28 @@
 
   a {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .svg-hero {
+    transform: scale(1.3);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .svg-hero {
+    transform: scale(2);
+  }
+
+  .main-about {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .container-item:nth-child(2) {
+    img {
+      display: none;
+    }
   }
 }
