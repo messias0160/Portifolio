@@ -7,14 +7,8 @@
   justify-content: space-between;
 
   padding: 48px 16px;
-}
 
-@media screen and (max-width: 960px) {
-  .menu-left {
-    display: none;
-  }
-
-  .menu-right {
+  .menu-mobile {
     display: none;
   }
 }
@@ -48,16 +42,6 @@
 
 .hero {
   height: 85vh;
-}
-
-@media screen and (max-width: 960px) {
-  .hero {
-    height: auto;
-  }
-
-  .container {
-    flex-direction: column;
-  }
 }
 
 .container-item:nth-child(1) {
@@ -149,7 +133,7 @@
 
     img {
       max-width: 130px;
-      transform: translate(-15px, -12px) scale(1.2);
+      transform: translate(7px, 15px) scale(1);
     }
   }
 
@@ -312,6 +296,29 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .square {
+    padding: 10px 10px;
+
+    &::after {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .main-about {
+    flex-direction: column;
+    gap: 32px;
+
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .svg-hero {
     transform: scale(2);
@@ -325,18 +332,79 @@
     display: none;
   }
 
-  .main-about {
-    flex-direction: column;
-    gap: 32px;
-
-    .left {
-      flex: 1;
-    }
-  }
-
   .container-item:nth-child(2) {
     img {
       display: none;
     }
+  }
+
+  .menu {
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    background: #222;
+    z-index: 999;
+    transition: 0.3s ease;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  .menu-mobile {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px 4px 0 0;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    margin: 16px 0 0 8px;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+
+    &::before {
+      margin-right: 4px;
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 12px;
+      background: #fff;
+      box-shadow: 0 4px #fff, 0 -4px #fff;
+      transition: transform 0.3s;
+    }
+  }
+
+  .menu-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menu-logo {
+    display: none;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
   }
 }

@@ -1,3 +1,12 @@
+const btnMenu = document.querySelector(".menu-mobile");
+const menu = document.querySelector(".menu");
+
+function menuMobile() {
+  menu.classList.toggle("active");
+}
+
+btnMenu.addEventListener("click", menuMobile);
+
 document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
 

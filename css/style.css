@@ -761,13 +761,8 @@ body {
   padding: 48px 16px;
 }
 
-@media screen and (max-width: 960px) {
-  .menu-left {
-    display: none;
-  }
-  .menu-right {
-    display: none;
-  }
+.menu .menu-mobile {
+  display: none;
 }
 
 .flex-end {
@@ -815,18 +810,6 @@ body {
 
 .hero {
   height: 85vh;
-}
-
-@media screen and (max-width: 960px) {
-  .hero {
-    height: auto;
-  }
-  .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .container-item:nth-child(1) {
@@ -950,8 +933,8 @@ body {
 
 .about-content .avatar img {
   max-width: 130px;
-  -webkit-transform: translate(-15px, -12px) scale(1.2);
-          transform: translate(-15px, -12px) scale(1.2);
+  -webkit-transform: translate(7px, 15px) scale(1);
+          transform: translate(7px, 15px) scale(1);
 }
 
 .about-content .descripition {
@@ -1154,16 +1137,13 @@ body {
   }
 }
 
-@media screen and (max-width: 960px) {
-  .svg-hero {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+@media screen and (max-width: 650px) {
+  .square {
+    padding: 10px 10px;
   }
-  .img-project {
-    max-width: 0;
-  }
-  .to-top {
-    display: none;
+  .square::after {
+    width: 75px;
+    height: 75px;
   }
   .main-about {
     -webkit-box-orient: vertical;
@@ -1176,9 +1156,124 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .svg-hero {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  .img-project {
+    max-width: 0;
+  }
+  .to-top {
+    display: none;
   }
   .container-item:nth-child(2) img {
     display: none;
+  }
+  .menu {
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+    background: #222;
+    z-index: 999;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .menu.active {
+    left: 0;
+  }
+  .menu-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px 4px 0 0;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    margin: 16px 0 0 8px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 300;
+  }
+  .menu-mobile::before {
+    margin-right: 4px;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background: #fff;
+    -webkit-box-shadow: 0 4px #fff, 0 -4px #fff;
+            box-shadow: 0 4px #fff, 0 -4px #fff;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .menu-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+  .menu-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu-logo {
+    display: none;
+  }
+  .hero {
+    height: auto;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
