@@ -1,11 +1,27 @@
 const btnMenu = document.querySelector(".menu-mobile");
 const menu = document.querySelector(".menu");
+const headerMenu = document.querySelector(".header-menu");
 
 function menuMobile() {
   menu.classList.toggle("active");
+  outsideclick(headerMenu, () => {
+    menu.classList.remove("active");
+  });
 }
 
 btnMenu.addEventListener("click", menuMobile);
+
+function outsideclick(element, callback) {
+  const html = document.documentElement;
+  html.addEventListener("click", handleOutsideClick);
+
+  function handleOutsideClick(event) {
+    if (!element.contains(event.target)) {
+      html.removeEventListener("click", handleOutsideClick);
+      callback();
+    }
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline();
