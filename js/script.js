@@ -202,6 +202,7 @@ const spider = document.querySelector(".spider");
 const worksModal = document.querySelector(".works-modal");
 
 function handleClick(event) {
+  event.preventDefault();
   worksModal.classList.add("works-active");
 
   document
