@@ -186,13 +186,16 @@
   }
 
   div {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 80%;
 
     img {
       position: absolute;
       display: none;
+      width: 100%;
     }
 
     .img-active {

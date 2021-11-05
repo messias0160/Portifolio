@@ -213,6 +213,14 @@ happy.addEventListener("click", handleClick);
 podcastr.addEventListener("click", handleClick);
 spider.addEventListener("click", handleClick);
 
-document.querySelector(".close").addEventListener("click", () => {
+function removeModalClass() {
+  const modalImgRemoveClass = document.querySelectorAll(".remove-class");
+
+  modalImgRemoveClass.forEach((img) => {
+    img.classList.remove("img-active");
+  });
+
   worksModal.classList.remove("works-active");
-});
+}
+
+document.querySelector(".close").addEventListener("click", removeModalClass);

@@ -991,6 +991,7 @@ body {
 }
 
 .works-modal div {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1000,11 +1001,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 80%;
 }
 
 .works-modal div img {
   position: absolute;
   display: none;
+  width: 100%;
 }
 
 .works-modal div .img-active {
