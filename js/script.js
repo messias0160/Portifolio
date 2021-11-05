@@ -195,3 +195,24 @@ if (target.length) {
     }, 150)
   );
 }
+
+const happy = document.querySelector(".happy");
+const podcastr = document.querySelector(".podcastr");
+const spider = document.querySelector(".spider");
+const worksModal = document.querySelector(".works-modal");
+
+function handleClick(event) {
+  worksModal.classList.add("works-active");
+
+  document
+    .querySelector(`#${event.target.innerText.toLowerCase()}`)
+    .classList.add("img-active");
+}
+
+happy.addEventListener("click", handleClick);
+podcastr.addEventListener("click", handleClick);
+spider.addEventListener("click", handleClick);
+
+document.querySelector(".close").addEventListener("click", () => {
+  worksModal.classList.remove("works-active");
+});
