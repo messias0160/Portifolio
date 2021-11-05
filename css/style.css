@@ -990,7 +990,7 @@ body {
   opacity: 1;
 }
 
-.works-modal div {
+.works-modal .img-modal {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1004,13 +1004,13 @@ body {
   width: 80%;
 }
 
-.works-modal div img {
+.works-modal .img-modal img {
   position: absolute;
   display: none;
   width: 100%;
 }
 
-.works-modal div .img-active {
+.works-modal .img-modal .img-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
