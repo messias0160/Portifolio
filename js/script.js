@@ -196,6 +196,8 @@ if (target.length) {
   );
 }
 
+// Modal
+
 const happy = document.querySelector(".happy");
 const podcastr = document.querySelector(".podcastr");
 const spider = document.querySelector(".spider");
