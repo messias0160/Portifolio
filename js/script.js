@@ -203,27 +203,27 @@ const podcastr = document.querySelector(".podcastr");
 const spider = document.querySelector(".spider");
 const worksModal = document.querySelector(".works-modal");
 
-function handleClick(event) {
-  event.preventDefault();
-  worksModal.classList.add("works-active");
+// function handleClick(event) {
+//   event.preventDefault();
+//   worksModal.classList.add("works-active");
 
-  document
-    .querySelector(`#${event.target.innerText.toLowerCase()}`)
-    .classList.add("img-active");
-}
+//   document
+//     .querySelector(`#${event.target.innerText.toLowerCase()}`)
+//     .classList.add("img-active");
+// }
 
-happy.addEventListener("click", handleClick);
-podcastr.addEventListener("click", handleClick);
-spider.addEventListener("click", handleClick);
+// happy.addEventListener("click", handleClick);
+// podcastr.addEventListener("click", handleClick);
+// spider.addEventListener("click", handleClick);
 
-function removeModalClass() {
-  const modalImgRemoveClass = document.querySelectorAll(".remove-class");
+// function removeModalClass() {
+//   const modalImgRemoveClass = document.querySelectorAll(".remove-class");
 
-  modalImgRemoveClass.forEach((img) => {
-    img.classList.remove("img-active");
-  });
+//   modalImgRemoveClass.forEach((img) => {
+//     img.classList.remove("img-active");
+//   });
 
-  worksModal.classList.remove("works-active");
-}
+//   worksModal.classList.remove("works-active");
+// }
 
-document.querySelector(".close").addEventListener("click", removeModalClass);
+// document.querySelector(".close").addEventListener("click", removeModalClass);
