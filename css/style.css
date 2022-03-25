@@ -758,7 +758,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 48px 16px;
+  padding: 3rem 6rem;
 }
 
 .menu-mobile {
