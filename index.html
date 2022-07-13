@@ -15,24 +15,24 @@
   </head>
   <body>
     <!-- HEADER -->
-  <div id="top"></div>
+    <div id="top"></div>
     <header class="header-menu">
       <button class="menu-mobile">Menu</button>
       <div class="menu">
-      
-      <div class="menu-left">
-        <a href="#" class="link menu-1">Home</a>
-        <a href="#section-01" class="link scroll-suave menu-2">About</a>
+        <div class="menu-left">
+          <a href="#" class="link menu-1">Home</a>
+          <a href="#section-01" class="link scroll-suave menu-2">About</a>
+        </div>
+        <div class="menu-logo">
+          <h5 class="menu-3">Rafael</h5>
+        </div>
+        <div class="menu-right">
+          <a href="#section-02" class="link scroll-suave menu-4">Works</a>
+          <a href="#section-03" class="link scroll-suave menu-5"
+            >Get in touch</a
+          >
+        </div>
       </div>
-      <div class="menu-logo">
-        <h5 class="menu-3">Rafael</h5>
-      </div>
-      <div class="menu-right">
-        <a href="#section-02" class="link scroll-suave menu-4">Works</a>
-        <a href="#section-03" class="link scroll-suave menu-5">Get in touch</a>
-      </div>
-
-</div>
     </header>
 
     <!-- BACKGROUND HERO -->
@@ -212,51 +212,55 @@
       </div>
     </section>
 
-    <!-- SELECTED WORKS -->
-
     <section class="list" id="section-01">
       <div class="list-item anima-scroll about-content">
         <h2 class="mb-4">About me</h2>
         <div class="main-about">
-        <div class="left">
-          <div class="avatar">
-            <img src="/img/photo-profile.jpeg" alt="Foto de perfil" />
+          <div class="left">
+            <div class="avatar">
+              <img src="/img/photo-profile.jpeg" alt="Foto de perfil" />
+            </div>
+
+            <h5 class="ml-1">Rafael Gonçalves</h5>
+
+            <div class="social-icons ml-1 mt-3">
+              <a href="https://github.com/DevRafael-GL" target="_blank">
+                <img src="/svg/github.svg" alt="Link github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rafael-goncalves-lima/"
+                target="_blank"
+              >
+                <img src="/svg/linkedin.svg" alt="link linkedin" />
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <div class="descripition">
+              <h4 class="mb-3">About me</h4>
+              <h6 class="mb-3">
+                Hi, my name is Rafael. I met the program through a friend in the
+                year 2019, since then I have been studying web development
+                technologies, front-end, always seeking the next level.
+              </h6>
+              <h4 class="mb-3">Skills and Competences</h4>
+              <div class="ml-1">
+                <p><span class="mr-1">•</span> HTML 5</p>
+                <p><span class="mr-1">•</span> CSS 3</p>
+                <p><span class="mr-1">•</span> Javascript</p>
+                <p><span class="mr-1">•</span> React.js</p>
+              </div>
+            </div>
           </div>
 
-          <h5 class="ml-1">Rafael Gonçalves</h5>
-          
-          <div class="social-icons ml-1 mt-3">
-            <a href="https://github.com/DevRafael-GL" target="_blank">
-            <img  src="/svg/github.svg" alt="Link github">
-           </a>
-           <a href="https://www.linkedin.com/in/rafael-goncalves-lima/" target="_blank">
-            <img src="/svg/linkedin.svg" alt="link linkedin"> 
-          </a>           
-          </div>
+          <a href="#top" class="scroll-suave to-top">
+            <img class="to-top" href="#top" src="/svg/top.svg" alt=""
+          /></a>
         </div>
-        <div class="right">
-          <div class="descripition">
-            <h4 class="mb-3">About me</h4>
-            <h6 class="mb-3">
-              Hi, my name is Rafael. I met the program through a friend in the year 2019, since then I have been studying web development technologies, front-end, always seeking the next level.
-            </h6>
-            <h4 class="mb-3">Skills and Competences</h4>
-            <div class="ml-1">
-            <p><span class="mr-1">•</span> HTML 5</p>
-            <p><span class="mr-1">•</span> CSS 3</p>
-            <p><span class="mr-1">•</span> Javascript</p>
-            <p><span class="mr-1">•</span> React.js</p>
-          </div>
-          </div>
-        </div>
-        
-        <a href="#top" class="scroll-suave to-top">	
-        <img class="to-top" href="#top" src="/svg/top.svg" alt=""></a>
       </div>
-      </div>
-
-      
     </section>
+
+    <!-- SELECTED WORKS -->
 
     <section class="list" id="section-02">
       <div class="list-item anima-scroll">
@@ -268,9 +272,13 @@
         <a class="link-works happy" href="https://weather-analytics.vercel.app">
           <h3>Weather Analytics</h3>
         </a>
-        <img class="img-project" src="/img/weather-analytics.png" alt="weather analytics" />
+        <img
+          class="img-project"
+          src="/img/weather-analytics.png"
+          alt="weather analytics"
+        />
       </div>
-      
+
       <div class="bb-gray"></div>
 
       <div class="list-item anima-scroll projects py-6">
@@ -278,7 +286,11 @@
         <a class="link-works podcastr" href="/">
           <h3>Podcastr</h3>
         </a>
-        <img class="img-project" src="/img/podcastr-project.jpg" alt="podcastr" />
+        <img
+          class="img-project"
+          src="/img/podcastr-project.jpg"
+          alt="podcastr"
+        />
       </div>
 
       <div class="bb-gray"></div>
@@ -304,8 +316,6 @@
     <section class="get anima-scroll mt-9" id="section-03">
       <h2>Get in touch</h2>
       <h3 class="mt-5 mb-7 mask text-center">rafaelgonsalveslima@gmail.com</h3>
-
-      
     </section>
 
     <script

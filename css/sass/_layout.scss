@@ -226,6 +226,7 @@
     z-index: 2;
     padding: 18px 24px;
     &:hover {
+      text-decoration: underline 2.8px;
       & + .img-project {
         transform: translate(-50%, -50%) translate3d(0, 0, 0);
         opacity: 1;
