@@ -27,7 +27,7 @@ a {
 
 .link {
   position: relative;
-  padding: 8px 24px;
+  padding: 8px 0px;
   font-size: 24px;
   display: inline-block;
   transition: 0.5s ease;
@@ -1109,8 +1109,9 @@ body {
     display: none;
   }
   .menu {
-    position: absolute;
-    left: -300px;
+    position: fixed;
+    transform: translateY(-100%);
+    right: 0;
     width: 300px;
     display: flex;
     align-items: center;
@@ -1121,32 +1122,33 @@ body {
     transition: 0.3s ease;
   }
   .menu.active {
-    left: 0;
+    transform: translateY(0);
   }
   .menu-mobile {
     display: flex;
-    background: #222;
+    background: transparent;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 4px 4px 0 0;
     text-transform: uppercase;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-    margin: 16px 0 0 8px;
+    /* margin: 16px 0 0 0; */
     align-items: center;
-    position: relative;
-    z-index: 300;
+    position: fixed;
+    right: 0;
+    z-index: 3000;
   }
   .menu-mobile::before {
-    margin-right: 4px;
+    margin-right: 6px;
     content: "";
     display: inline-block;
     height: 2px;
-    width: 12px;
+    width: 20px;
     background: #fff;
-    box-shadow: 0 4px #fff, 0 -4px #fff;
+    box-shadow: 0 6px #fff, 0 -6px #fff; 
     transition: transform 0.3s;
   }
   .menu-left {

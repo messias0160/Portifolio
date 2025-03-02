@@ -146,6 +146,7 @@ function getScrollToByHref(element) {
 
 function scrollToIdOnClick(event) {
   event.preventDefault();
+  menu.classList.remove("active");
   const to = getScrollToByHref(event.target);
 
   window.scroll({
