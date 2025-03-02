@@ -743,6 +743,15 @@ body {
   padding: 3rem 6rem;
 }
 
+.menu-left {
+  display: flex;
+  gap: 20px;
+}
+.menu-right {
+  display: flex;
+  gap: 20px;
+}
+
 .menu-mobile {
   display: none;
 }
