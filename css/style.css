@@ -27,7 +27,7 @@ a {
 
 .link {
   position: relative;
-  padding: 8px 0px;
+  padding: 8px 24px;
   font-size: 24px;
   display: inline-block;
   transition: 0.5s ease;
@@ -117,8 +117,7 @@ h6 {
   content: "";
   display: block;
   transform: translate(0%, -15%) rotate(45deg);
-  background: linear-gradient(225deg, #66995d 0%, rgba(102, 153, 93, 0) 100%);
-
+  background: linear-gradient(225deg, #66995d 0%, rgba(83, 138, 240, 0.2666666667) 100%);
   border-radius: 4px;
   transition: 0.5s ease;
 }
@@ -744,13 +743,19 @@ body {
   padding: 3rem 6rem;
 }
 
-.menu-left {
+.menu-3 {
+  font-size: clamp(32px, 6vw, 65px);
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.menu-right {
-  display: flex;
-  gap: 20px;
+.menu-3 img {
+  width: clamp(50px, 8vw, 85px);
+}
+
+.menu-logo-mobile {
+  display: none;
 }
 
 .menu-mobile {
@@ -839,7 +844,7 @@ body {
   padding: 0 18px;
 }
 .about-content .social-icons {
-  /* gap: 18px; */
+  gap: 18px;
   display: flex;
   padding: 0;
 }
@@ -853,7 +858,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #66995D;
+  border: 3px solid #66995d;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
@@ -861,7 +866,7 @@ body {
 }
 .about-content .avatar img {
   max-width: 130px;
-  transform: translate(9px, 3px) scale(1.037);
+  transform: translate(7px, 15px) scale(1);
 }
 .about-content .descripition {
   max-width: 700px;
@@ -946,8 +951,144 @@ body {
           text-decoration: underline 2.8px;
 }
 .list-item .link-works:hover + .img-project {
-  transform: translate(-20%, -50%) translate3d(0, 0, 0);
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
   opacity: 1;
+}
+
+.section-galery {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.section-galery h2 {
+  padding: 24px;
+}
+.section-galery .link-works {
+  z-index: 2;
+  padding: 18px 24px;
+}
+.section-galery .link-works:hover {
+  -webkit-text-decoration: underline 2.8px;
+          text-decoration: underline 2.8px;
+}
+.section-galery .link-works:hover + .img-project {
+  transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide:hover {
+  will-change: transform;
+}
+
+.slide li {
+  width: 80vw;
+  flex-shrink: 0;
+  max-width: 800px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s ease;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-control=slide] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+[data-control=slide] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #66995d;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-control=slide] li.active a,
+[data-control=slide] li a:hover {
+  background: #66995d;
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.custom-controls li {
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  transform: scale(0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.arrow-nav button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background: #66995d url("../img/arrow.svg") center center no-repeat;
+}
+
+.arrow-nav button.prev {
+  transform: rotate(-180deg);
 }
 
 .anima-scroll {
@@ -971,10 +1112,6 @@ body {
   border-radius: 4px;
 }
 
-.img-logo {
-  width: 64px;
-}
-
 .get {
   max-width: 1200px;
   margin: 0 auto;
@@ -994,27 +1131,15 @@ body {
 }
 
 #bg-heroline1 {
-  -webkit-animation: heroline1 linear 2.5s infinite alternate;
-          animation: heroline1 linear 2.5s infinite alternate;
+  animation: heroline1 linear 2.5s infinite alternate;
 }
 
 #bg-heroline2 {
-  -webkit-animation: heroline2 linear 2s infinite alternate;
-          animation: heroline2 linear 2s infinite alternate;
+  animation: heroline2 linear 2s infinite alternate;
 }
 
 #bg-heroline3 {
-  -webkit-animation: heroline3 linear 3s infinite alternate;
-          animation: heroline3 linear 3s infinite alternate;
-}
-
-@-webkit-keyframes heroline1 {
-  0% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: translateX(60px);
-  }
+  animation: heroline3 linear 3s infinite alternate;
 }
 
 @keyframes heroline1 {
@@ -1025,28 +1150,12 @@ body {
     transform: translateX(60px);
   }
 }
-@-webkit-keyframes heroline2 {
-  0% {
-    transform: translateX(90px);
-  }
-  100% {
-    transform: translateX(-80px);
-  }
-}
 @keyframes heroline2 {
   0% {
     transform: translateX(90px);
   }
   100% {
     transform: translateX(-80px);
-  }
-}
-@-webkit-keyframes heroline3 {
-  0% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateX(-50px);
   }
 }
 @keyframes heroline3 {
@@ -1101,7 +1210,6 @@ body {
   .stop0 {
     stop-color: #000000;
   }
-
   .stop1 {
     stop-color: #000000;
     stop-opacity: 1;
@@ -1138,7 +1246,7 @@ body {
     display: flex;
     background: transparent;
     border: none;
-    padding: 1.5rem 1rem;
+    padding: 2.5rem 1rem;
     border-radius: 4px 4px 0 0;
     text-transform: uppercase;
     font-family: "IBM Plex Mono", monospace;
@@ -1158,7 +1266,7 @@ body {
     height: 2px;
     width: 20px;
     background: #fff;
-    box-shadow: 0 6px #fff, 0 -6px #fff; 
+    box-shadow: 0 6px #fff, 0 -6px #fff;
     transition: transform 0.3s;
   }
   .menu-left {
@@ -1175,10 +1283,14 @@ body {
   .menu-logo {
     display: none;
   }
+  .menu-logo-mobile {
+    display: block;
+    padding-top: 8px;
+  }
   .hero {
     height: auto;
   }
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=style.css.map */
