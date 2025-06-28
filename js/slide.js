@@ -191,6 +191,7 @@ export class Slide {
     this.addResizeEvent();
     this.changeSlide(0);
     this.autoPlay();
+    this.addControl();
     return this;
   }
 }
